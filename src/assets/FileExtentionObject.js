@@ -1,0 +1,26 @@
+export const fileExtensions = {
+    javascript: '.js',
+    typescript: '.ts',
+    html: '.html',
+    css: '.css',
+    json: '.json',
+    python: '.py',
+    go: '.go',
+    java: '.java',
+    csharp: '.cs',
+    cpp: '.cpp',
+    ruby: '.rb',
+    php: '.php',
+    sql: '.sql',
+    markdown: '.md',
+    yaml: '.yaml',
+    dockerfile: 'Dockerfile',
+    bash: '.sh',
+    swift: '.swift',
+    'objective-c': '.m',
+    rust: '.rs',
+    kotlin: '.kt',
+    lua: '.lua',
+    haskell: '.hs'
+  };
+  

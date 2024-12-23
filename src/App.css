@@ -1,0 +1,43 @@
+/* Styles for the iframe container */
+.iframe-container {
+  position: relative;
+  padding-bottom: 28.25%; /* (52) 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling the note-taking area */
+.react-quill {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+
+.editor-container {
+  width: 100%;   /* Fixed width for the container */
+  height: 260px;  /* Fixed height for the container */
+  margin: 0 auto; /* Center the editor */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  overflow: hidden; /* Hide scrollbars outside of MonacoEditor container */
+}
+
+/* Default light theme */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
