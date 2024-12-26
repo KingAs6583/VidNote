@@ -29,6 +29,10 @@ function App() {
     document.body.className = isChecked ? 'dark' : 'light';
   }, [isChecked]);
 
+  useEffect(() => {
+    setVideoIdFromUrl();
+  },[]);
+
   // Function to save notes as a .txt file
   const saveNoteContent = () => {
     const blob = new Blob([editor.toLowerCase() === "normal" ?
@@ -39,6 +43,15 @@ function App() {
     link.download = editor.toLowerCase() === "normal" ? 'notes.md' : 'notes.' + fileExtensions[lang];
     link.click();
     window.URL.revokeObjectURL(url);
+  };
+
+  const setVideoIdFromUrl = () => {
+    const queryString = window.location.search;
+    // Create a URLSearchParams object
+    const params = new URLSearchParams(queryString);
+    // Retrieve a specific parameter by its name
+    const paramValue = params.get('videolink');
+    setVideoLink(!paramValue? videoLink : paramValue);
   };
 
   return (

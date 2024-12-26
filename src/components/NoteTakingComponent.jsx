@@ -17,7 +17,7 @@ const NoteTakingComponent = ({noteContent,setNoteContent}) => {
           onChange={handleNoteChange}
           theme="snow"
           placeholder="Write your notes here..."
-          style={{ height: '220px', marginTop: '10px' }}
+          className='editor-container'
         />
       </div>
     </>

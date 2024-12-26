@@ -1,7 +1,8 @@
 /* Styles for the iframe container */
 .iframe-container {
   position: relative;
-  padding-bottom: 28.25%; /* (52) 16:9 Aspect Ratio */
+  padding-bottom: 28.25%;
+  /* (52) 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -24,11 +25,16 @@
 
 
 .editor-container {
-  width: 100%;   /* Fixed width for the container */
-  height: 260px;  /* Fixed height for the container */
-  margin: 0 auto; /* Center the editor */
-  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
-  overflow: hidden; /* Hide scrollbars outside of MonacoEditor container */
+  width: 100%;
+  /* Fixed width for the container */
+  height: 260px;
+  /* Fixed height for the container */
+  margin: 0 auto;
+  /* Center the editor */
+  border: 1px solid #ccc;
+  /* Optional: Add a border for better visibility */
+  overflow: hidden;
+  /* Hide scrollbars outside of MonacoEditor container */
 }
 
 /* Default light theme */
@@ -41,3 +47,52 @@ body.dark {
   background-color: #333333;
   color: #ffffff;
 }
+
+.controller {
+ display: flex;
+ justify-content: space-between;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+  /* This will apply to devices with a screen width of 767px or less */
+  .controller{
+    display: block;
+  }
+  .iframe-container{
+    padding-bottom: 70.25%;
+  }
+  .btn {
+    margin: 2px 5px;
+  }
+  .editor-container{
+    height: 300px;
+  }
+}
+@media (max-width: 1023px) and (orientation: landscape) {
+  /* Styles for mobile devices in landscape orientation */
+  /* This will apply to devices with a screen width of 1023px or less and landscape orientation */
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets */
+  /* This will apply to devices with a screen width between 768px and 1024px */
+  .controller{
+    display: block;
+  }
+  .iframe-container{
+    padding-bottom: 60.25%;
+  }
+  .btn {
+    margin: 2px 5px;
+  }
+  .editor-container{
+    height: 500px;
+  }
+
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* Styles for tablets in landscape mode */
+  /* This will apply to devices with a screen width between 1024px and 1280px */
+}
+
